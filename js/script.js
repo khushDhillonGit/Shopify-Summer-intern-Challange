@@ -2,7 +2,7 @@
 
 //fetch data from Nasa servers
 fetch(
-  "https://api.nasa.gov/planetary/apod?count=25&api_key=TFbqKd6Jmte8d4lTGGLcSvw7cqY5huDU5gAXi2qT"
+  "https://api.nasa.gov/planetary/apod?count=16&api_key=TFbqKd6Jmte8d4lTGGLcSvw7cqY5huDU5gAXi2qT"
 )
   .then((data) => data.json())
   .then((data) => impliment(data));
@@ -18,7 +18,7 @@ const impliment = (data) => {
   for (const { date, explanation, url, title } of data) {
     //to print only valid information
     if (
-      count < 16 &&
+      count < 12 &&
       date &&
       explanation &&
       title &&
